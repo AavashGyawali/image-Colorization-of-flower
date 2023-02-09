@@ -19,7 +19,8 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-model_path='./Image_Colorization_2'
+# model_path='./Image_Colorization_2'
+model_path='./Image_Colorization_3'
 model = keras.models.load_model(model_path)
 
 
