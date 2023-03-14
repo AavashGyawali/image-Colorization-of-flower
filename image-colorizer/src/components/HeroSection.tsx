@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
     setLoading(true);
     try {
       const res = await axios.post<string>(
-        `http://localhost:8000/`,
+        `${import.meta.env.VITE_SERVER_ENDPOINT}`,
         {
           image: base64.split(",")[1],
           type: selectedImage.type.split("/")[1],
@@ -121,8 +121,8 @@ const HeroSection: React.FC = () => {
             <div className="title">Image Colorizer</div>
             <div className="sub_title">
               Our AI based image colorizer helps you to colorize black and white
-              images, automatically . Add realistic colors to your black and
-              white photographs
+              images, automatically using auto encoder. Add realistic colors to
+              your black and white photographs
             </div>
           </div>
           <input

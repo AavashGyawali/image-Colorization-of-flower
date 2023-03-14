@@ -30,7 +30,7 @@
 .alertBox .content {
   font-size: 1.3rem;
   font-weight: bold;
-  color: white;
+  color: rgb(46, 46, 46);
 }
 
 @keyframes entry {
