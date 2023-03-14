@@ -44,8 +44,10 @@
 }
 
 .heroSectionContainer .desc .sub_title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   width: 900px;
+
+  margin-bottom: 30px;
 }
 
 .uploader {
@@ -71,7 +73,7 @@
 }
 
 .displayContainer {
-  margin: 30px 0;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,6 +94,20 @@
 
 .change-image:hover {
   color: rgb(54, 138, 207);
+}
+
+.outputDisplay {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes up-down {

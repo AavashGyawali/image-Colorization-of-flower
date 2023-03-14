@@ -44,13 +44,14 @@ def read_root():
 
 class ImgData(BaseModel):
     image: str
+    type: str
 
 @app.post('/')
 async def img(data: ImgData):
   img = Image.open(io.BytesIO(base64.decodebytes(bytes(data.image, "utf-8"))))
-  img.save('my-image.jpeg')
+  img.save(f'my-image.{data.type}')
   
-  test_path = './my-image.jpeg'
+  test_path = f'./my-image.{data.type}'
 
   color_me = []
   img = img_to_array(load_img(test_path))
